@@ -161,7 +161,7 @@ function issueJwt(clientId: string, scope: string): OauthTokenResponse {
 }
 
 // Clean up expired codes every 60 seconds
-setInterval(() => {
+const cleanupTimer = setInterval(() => {
   const now = Date.now();
   for (const [key, code] of authorizationCodes) {
     if (code.expiresAt < now) authorizationCodes.delete(key);
@@ -170,6 +170,7 @@ setInterval(() => {
     if (code.expiresAt < now) deviceCodes.delete(key);
   }
 }, 60_000);
+cleanupTimer.unref();
 
 // --- Authorization Code + PKCE Flow ---
 
