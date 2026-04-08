@@ -1,0 +1,196 @@
+[
+  {
+    "id": "solar-weather",
+    "name": "Solar System Explorer",
+    "description": "Your guide to the solar system! Get weather reports, space facts, and astronomy events.",
+    "url": "http://localhost:3000/agents/solar/",
+    "authType": "none",
+    "tags": ["weather", "planets", "fun"]
+  },
+  {
+    "id": "code-reviewer",
+    "name": "Code Review Assistant",
+    "description": "Review, explain, and refactor code. Get feedback on your programming.",
+    "url": "http://localhost:3000/agents/code-reviewer/",
+    "authType": "apiKey",
+    "authConfig": { "key": "your-secret-api-key", "headerName": "X-API-Key" },
+    "tags": ["code", "review", "programming"]
+  },
+  {
+    "id": "chef",
+    "name": "Recipe Chef",
+    "description": "Recipes, cooking tips, and meal plans. Your personal culinary assistant.",
+    "url": "http://localhost:3000/agents/chef/",
+    "authType": "basic",
+    "authConfig": { "username": "admin", "password": "secret" },
+    "tags": ["recipes", "cooking", "food"]
+  },
+  {
+    "id": "dad-jokes",
+    "name": "Dad Jokes Generator",
+    "description": "Random, themed, and battle jokes. Guaranteed to make you groan!",
+    "url": "http://localhost:3000/agents/dad-jokes/",
+    "authType": "oauth2",
+    "authConfig": {
+      "clientId": "a2a-client",
+      "clientSecret": "a2a-secret",
+      "tokenUrl": "http://localhost:3000/oauth/token",
+      "scopes": "a2a:invoke"
+    },
+    "connectionAuthType": "basic",
+    "connectionAuthConfig": { "username": "admin", "password": "secret" },
+    "tags": ["jokes", "humor", "fun"],
+    "protocolVersion": "1.0.0"
+  },
+  {
+    "id": "language-tutor",
+    "name": "Language Tutor",
+    "description": "Vocabulary, grammar, and conversation practice for language learning.",
+    "url": "http://localhost:3000/agents/language-tutor/",
+    "authType": "basic",
+    "authConfig": { "username": "admin", "password": "secret" },
+    "tags": ["language", "learning", "education"],
+    "protocolVersion": "1.0.0"
+  },
+  {
+    "id": "fitness",
+    "name": "Fitness Coach",
+    "description": "Workouts, exercises, and motivation to help you stay fit.",
+    "url": "http://localhost:3000/agents/fitness/",
+    "authType": "oauth2",
+    "authConfig": {
+      "clientId": "",
+      "clientSecret": "",
+      "tokenUrl": "",
+      "scopes": "",
+      "accessToken": "your-secret-api-key"
+    },
+    "connectionAuthType": "oauth2",
+    "connectionAuthConfig": {
+      "clientId": "",
+      "clientSecret": "",
+      "tokenUrl": "",
+      "scopes": "",
+      "accessToken": "your-secret-api-key"
+    },
+    "tags": ["fitness", "health", "workout"]
+  },
+  {
+    "id": "trivia",
+    "name": "Trivia Master",
+    "description": "Trivia questions and quizzes across various categories.",
+    "url": "http://localhost:3000/agents/trivia/",
+    "authType": "apiKey",
+    "authConfig": {
+      "key": "your-secret-api-key",
+      "headerName": "api_key",
+      "in": "query"
+    },
+    "connectionAuthType": "apiKey",
+    "connectionAuthConfig": {
+      "key": "your-secret-api-key",
+      "headerName": "api_key",
+      "in": "query"
+    },
+    "tags": ["trivia", "quiz", "fun"]
+  },
+  {
+    "id": "storyteller",
+    "name": "Story Narrator",
+    "description": "Short stories and bedtime tales. Let me tell you a story!",
+    "url": "http://localhost:3000/agents/storyteller/",
+    "authType": "apiKey",
+    "authConfig": { "key": "your-secret-api-key", "headerName": "X-API-Key" },
+    "connectionAuthType": "apiKey",
+    "connectionAuthConfig": {
+      "key": "your-secret-api-key",
+      "headerName": "X-API-Key"
+    },
+    "tags": ["stories", "creative", "entertainment"]
+  },
+  {
+    "id": "tech-news",
+    "name": "Tech News",
+    "description": "Tech trends, news, and explanations of the latest in technology.",
+    "url": "http://localhost:3000/agents/tech-news/",
+    "authType": "oauth2",
+    "authConfig": {
+      "clientId": "a2a-client",
+      "clientSecret": "a2a-secret",
+      "tokenUrl": "http://localhost:3000/oauth/token",
+      "scopes": "a2a:invoke",
+      "authorizationUrl": "http://localhost:3000/oauth/authorize"
+    },
+    "connectionAuthType": "oauth2",
+    "connectionAuthConfig": {
+      "clientId": "a2a-client",
+      "clientSecret": "a2a-secret",
+      "tokenUrl": "http://localhost:3000/oauth/token",
+      "scopes": "a2a:invoke",
+      "authorizationUrl": "http://localhost:3000/oauth/authorize"
+    },
+    "tags": ["tech", "news", "trends"]
+  },
+  {
+    "id": "haiku",
+    "name": "Haiku Poet",
+    "description": "Compose and explain haiku poetry. Experience the art of 5-7-5.",
+    "url": "http://localhost:3000/agents/haiku/",
+    "authType": "oauth2",
+    "authConfig": {
+      "clientId": "a2a-client",
+      "clientSecret": "a2a-secret",
+      "tokenUrl": "http://localhost:3000/oauth/token",
+      "scopes": "a2a:invoke"
+    },
+    "connectionAuthType": "oauth2",
+    "connectionAuthConfig": {
+      "clientId": "a2a-client",
+      "clientSecret": "a2a-secret",
+      "tokenUrl": "http://localhost:3000/oauth/token",
+      "scopes": "a2a:invoke"
+    },
+    "tags": ["poetry", "haiku", "creative"]
+  },
+  {
+    "id": "converter",
+    "name": "Unit Converter",
+    "description": "Convert units, time zones, and currency. Your conversion assistant.",
+    "url": "http://localhost:3000/agents/converter/",
+    "authType": "none",
+    "tags": ["converter", "units", "utility"]
+  },
+  {
+    "id": "media",
+    "name": "Media Showcase",
+    "description": "Demonstrates rich media responses: images, audio, video, and structured data using the A2A protocol.",
+    "url": "http://localhost:3000/agents/media/",
+    "authType": "none",
+    "tags": ["media", "images", "audio", "video", "demo"],
+    "protocolVersion": "1.0.0"
+  },
+  {
+    "id": "mock-echo",
+    "name": "Echo Agent",
+    "description": "Echoes back whatever you send. Useful for testing connectivity and message format.",
+    "url": "mock://echo",
+    "authType": "none",
+    "tags": ["test", "echo", "mock"]
+  },
+  {
+    "id": "mock-translator",
+    "name": "Translator Agent",
+    "description": "Mock translation agent. Supports common phrases in German, French, Spanish, and Japanese.",
+    "url": "mock://translator",
+    "authType": "none",
+    "tags": ["translation", "language", "mock"]
+  },
+  {
+    "id": "mock-calculator",
+    "name": "Calculator Agent",
+    "description": "Accepts JSON input with math operations. Send {\"operation\": \"add\", \"a\": 5, \"b\": 3}.",
+    "url": "mock://calculator",
+    "authType": "none",
+    "tags": ["math", "json", "mock"]
+  }
+]

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended", ":pinAllExceptPeerDependencies"],
+  "semanticCommits": "enabled",
+  "enabledManagers": ["npm", "github-actions"],
+  "branchPrefix": "deps/",
+  "timezone": "Europe/Berlin",
+  "schedule": ["every weekend"],
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0,
+  "packageRules": [
+    {
+      "groupName": "Express",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["express", "@types/express"]
+    },
+    {
+      "groupName": "Linting Tools",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["eslint", "@sap/eslint-config", "/^eslint-plugin/", "prettier"]
+    },
+    {
+      "groupName": "TypeScript",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["typescript", "@types/node", "tsx"]
+    },
+    {
+      "groupName": "Testing",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["jest", "@types/jest", "ts-jest", "supertest", "@types/supertest"]
+    },
+    {
+      "groupName": "GitHub Actions",
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["major", "minor", "patch", "digest"],
+      "semanticCommitType": "chore",
+      "automerge": true
+    },
+    {
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["dependencies", "devDependencies"],
+      "matchDatasources": ["npm"],
+      "semanticCommitType": "chore",
+      "automerge": true
+    }
+  ]
+}
