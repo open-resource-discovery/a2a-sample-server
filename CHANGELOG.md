@@ -7,8 +7,14 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [unreleased]
 
+### Security
+
+- Updated transitive dependencies to resolve npm audit advisories (form-data, body-parser, browserslist, qs, uuid, brace-expansion, minimatch, @babel/core)
+
 ### Added
 
+- Cloud Foundry deployment manifest (`manifest.yml`)
+- Pinned Node.js version to 24.22 via `engines` field and `.nvmrc`
 - 12 ready-to-use agents covering different use cases, auth schemes, and protocol versions
 - A2A protocol v0.3.0 and v1.0.0 support with automatic version-aware formatting
 - JSON-RPC 2.0 transport with SSE streaming support

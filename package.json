@@ -1,6 +1,6 @@
 {
   "name": "@open-resource-discovery/a2a-sample-server",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A server to spin up several A2A endpoints for testing and development purposes",
   "type": "module",
   "main": "dist/index.js",
