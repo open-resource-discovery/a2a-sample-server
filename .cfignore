@@ -1,0 +1,16 @@
+# Files excluded from `cf push` uploads.
+# The buildpack installs dependencies and builds on CF, so we don't ship them.
+# Crucially, .env is excluded so a local .env can't override manifest env vars.
+.git/
+node_modules/
+dist/
+coverage/
+.env
+.env.*
+*.log
+*.tsbuildinfo
+.github/
+.vscode/
+.idea/
+tests/
+src/**/__tests__/
