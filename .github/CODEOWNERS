@@ -1,5 +1,5 @@
 # Review owners for CI and build configuration.
-/.github/ @open-resource-discovery/a2a-sample-server-admin
-/renovate.json @open-resource-discovery/a2a-sample-server-admin
-/package.json @open-resource-discovery/a2a-sample-server-admin
-/package-lock.json @open-resource-discovery/a2a-sample-server-admin
+/.github/ @Fannon @pavelkornev
+/renovate.json @Fannon @pavelkornev
+/package.json @Fannon @pavelkornev
+/package-lock.json @Fannon @pavelkornev
