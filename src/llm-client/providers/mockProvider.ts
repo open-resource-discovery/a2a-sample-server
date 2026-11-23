@@ -1,9 +1,9 @@
-import { BaseLlmProvider } from "./baseProvider.js";
 import type {
+  ChatCompletionChunk,
   ChatCompletionRequest,
   ChatCompletionResponse,
-  ChatCompletionChunk,
 } from "../types.js";
+import { BaseLlmProvider } from "./baseProvider.js";
 
 interface MockAgentResponses {
   keyword: string;

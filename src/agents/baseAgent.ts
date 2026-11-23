@@ -1,8 +1,8 @@
-import type { AgentDefinition, A2aProtocolVersion } from "./types.js";
-import type { AgentCard, Part } from "../types/a2a.js";
-import type { LlmClient } from "../llm-client/index.js";
 import { config } from "../config.js";
+import type { LlmClient } from "../llm-client/index.js";
+import type { AgentCard, Part } from "../types/a2a.js";
 import { formatAgentCard } from "../utils/protocolFormatter.js";
+import type { A2aProtocolVersion, AgentDefinition } from "./types.js";
 
 export abstract class BaseAgent {
   protected llmClient: LlmClient;

@@ -1,6 +1,6 @@
+import { config } from "../../config.js";
 import { BaseAgent } from "../baseAgent.js";
 import type { AgentDefinition } from "../types.js";
-import { config } from "../../config.js";
 
 export class HaikuAgent extends BaseAgent {
   public getDefinition(): AgentDefinition {

@@ -20,7 +20,7 @@ describe("Auth Middleware", () => {
   }
 
   describe("validateAuth with no security schemes", () => {
-    let validateAuth: (typeof import("../auth.js"))["validateAuth"];
+    let validateAuth: typeof import("../auth.js")["validateAuth"];
 
     beforeAll(async () => {
       jest.resetModules();
@@ -42,7 +42,7 @@ describe("Auth Middleware", () => {
   });
 
   describe("API key authentication", () => {
-    let validateAuth: (typeof import("../auth.js"))["validateAuth"];
+    let validateAuth: typeof import("../auth.js")["validateAuth"];
 
     beforeAll(async () => {
       process.env.AUTH_API_KEY = "test-api-key";
@@ -98,7 +98,7 @@ describe("Auth Middleware", () => {
   });
 
   describe("Basic authentication", () => {
-    let validateAuth: (typeof import("../auth.js"))["validateAuth"];
+    let validateAuth: typeof import("../auth.js")["validateAuth"];
 
     beforeAll(async () => {
       process.env.AUTH_BASIC_USER = "testuser";
@@ -157,7 +157,7 @@ describe("Auth Middleware", () => {
   });
 
   describe("Bearer authentication", () => {
-    let validateAuth: (typeof import("../auth.js"))["validateAuth"];
+    let validateAuth: typeof import("../auth.js")["validateAuth"];
 
     beforeAll(async () => {
       process.env.AUTH_API_KEY = "my-bearer-token";
@@ -199,7 +199,7 @@ describe("Auth Middleware", () => {
   });
 
   describe("Multiple security schemes (OR logic)", () => {
-    let validateAuth: (typeof import("../auth.js"))["validateAuth"];
+    let validateAuth: typeof import("../auth.js")["validateAuth"];
 
     beforeAll(async () => {
       process.env.AUTH_API_KEY = "multi-key";

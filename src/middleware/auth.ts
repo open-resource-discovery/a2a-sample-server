@@ -1,7 +1,7 @@
 import type { Request } from "express";
-import type { SecurityScheme } from "../types/a2a.js";
 import { config } from "../config.js";
 import { verifyJwt } from "../oauth/mockOAuthServer.js";
+import type { SecurityScheme } from "../types/a2a.js";
 
 export interface AuthResult {
   authenticated: boolean;

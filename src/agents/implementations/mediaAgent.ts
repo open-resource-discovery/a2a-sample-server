@@ -1,7 +1,7 @@
+import { config } from "../../config.js";
+import type { Part } from "../../types/a2a.js";
 import { BaseAgent } from "../baseAgent.js";
 import type { AgentDefinition } from "../types.js";
-import type { Part } from "../../types/a2a.js";
-import { config } from "../../config.js";
 
 const SAMPLE_IMAGES = [
   {

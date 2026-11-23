@@ -2,10 +2,10 @@ process.env.AUTH_API_KEY = "test-api-key";
 process.env.AUTH_BASIC_USER = "admin";
 process.env.AUTH_BASIC_PASS = "password";
 
+import type { Express } from "express";
 import request from "supertest";
 import { createTestApp } from "../../__tests__/helpers/setup.js";
 import { config } from "../../config.js";
-import type { Express } from "express";
 
 let app: Express;
 

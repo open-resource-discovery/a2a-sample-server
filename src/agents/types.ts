@@ -1,4 +1,4 @@
-import type { Skill, AgentCapabilities, SecurityScheme } from "../types/a2a.js";
+import type { AgentCapabilities, SecurityScheme, Skill } from "../types/a2a.js";
 
 export type A2aProtocolVersion = "0.3.0" | "1.0.0";
 

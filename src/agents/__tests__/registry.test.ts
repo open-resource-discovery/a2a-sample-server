@@ -6,9 +6,9 @@
  */
 
 import { jest } from "@jest/globals";
-import type { AgentDefinition } from "../types.js";
-import { BaseAgent } from "../baseAgent.js";
 import { LlmClient } from "../../llm-client/index.js";
+import { BaseAgent } from "../baseAgent.js";
+import type { AgentDefinition } from "../types.js";
 
 // ---------------------------------------------------------------------------
 // Concrete test subclass of the abstract BaseAgent
@@ -40,7 +40,7 @@ class TestAgent extends BaseAgent {
 // Helper to get a fresh registry from a fresh module load
 // ---------------------------------------------------------------------------
 
-async function freshRegistry(): Promise<(typeof import("../registry.js"))["agentRegistry"]> {
+async function freshRegistry(): Promise<typeof import("../registry.js")["agentRegistry"]> {
   const mod = await import("../registry.js");
   return mod.agentRegistry;
 }

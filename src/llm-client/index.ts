@@ -1,8 +1,8 @@
 export { LlmClient } from "./client.js";
 export type {
-  LlmConfig,
-  ChatMessage,
+  ChatCompletionChunk,
   ChatCompletionRequest,
   ChatCompletionResponse,
-  ChatCompletionChunk,
+  ChatMessage,
+  LlmConfig,
 } from "./types.js";

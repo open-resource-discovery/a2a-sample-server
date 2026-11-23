@@ -1,14 +1,14 @@
-import { Router, Request, Response } from "express";
 import crypto from "crypto";
+import { type Request, type Response, Router } from "express";
+import { config } from "../config.js";
 import type {
-  OauthClient,
-  OauthTokenResponse,
-  OauthErrorResponse,
-  JwtPayload,
   AuthorizationCode,
   DeviceCode,
+  JwtPayload,
+  OauthClient,
+  OauthErrorResponse,
+  OauthTokenResponse,
 } from "./types.js";
-import { config } from "../config.js";
 
 const router = Router();
 

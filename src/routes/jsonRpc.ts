@@ -49,7 +49,7 @@ jsonRpcRouter.post("/", async (req, res) => {
     };
     res.json(response);
   } catch (error) {
-    // eslint-disable-next-line no-console
+    // biome-ignore lint/suspicious/noConsole: Existing exception retained during tooling migration.
     console.error("Error handling JSON-RPC request:", error);
     const response: JsonRpcResponse = {
       jsonrpc: "2.0",

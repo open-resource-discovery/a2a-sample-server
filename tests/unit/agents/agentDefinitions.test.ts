@@ -1,17 +1,17 @@
-import { LlmClient } from "../../../src/llm-client/client.js";
-import { SolarAgent } from "../../../src/agents/implementations/solarAgent.js";
-import { CodeReviewerAgent } from "../../../src/agents/implementations/codeReviewerAgent.js";
+import type { BaseAgent } from "../../../src/agents/baseAgent.js";
 import { ChefAgent } from "../../../src/agents/implementations/chefAgent.js";
+import { CodeReviewerAgent } from "../../../src/agents/implementations/codeReviewerAgent.js";
+import { ConverterAgent } from "../../../src/agents/implementations/converterAgent.js";
 import { DadJokesAgent } from "../../../src/agents/implementations/dadJokesAgent.js";
-import { LanguageTutorAgent } from "../../../src/agents/implementations/languageTutorAgent.js";
 import { FitnessAgent } from "../../../src/agents/implementations/fitnessAgent.js";
-import { TriviaAgent } from "../../../src/agents/implementations/triviaAgent.js";
+import { HaikuAgent } from "../../../src/agents/implementations/haikuAgent.js";
+import { LanguageTutorAgent } from "../../../src/agents/implementations/languageTutorAgent.js";
+import { MediaAgent } from "../../../src/agents/implementations/mediaAgent.js";
+import { SolarAgent } from "../../../src/agents/implementations/solarAgent.js";
 import { StorytellerAgent } from "../../../src/agents/implementations/storytellerAgent.js";
 import { TechNewsAgent } from "../../../src/agents/implementations/techNewsAgent.js";
-import { HaikuAgent } from "../../../src/agents/implementations/haikuAgent.js";
-import { ConverterAgent } from "../../../src/agents/implementations/converterAgent.js";
-import { MediaAgent } from "../../../src/agents/implementations/mediaAgent.js";
-import type { BaseAgent } from "../../../src/agents/baseAgent.js";
+import { TriviaAgent } from "../../../src/agents/implementations/triviaAgent.js";
+import { LlmClient } from "../../../src/llm-client/client.js";
 
 const llmClient = new LlmClient({ model: "mock" });
 

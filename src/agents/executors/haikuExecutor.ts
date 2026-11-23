@@ -1,6 +1,6 @@
+import type { Task, TaskArtifactUpdateEvent, TaskStatusUpdateEvent } from "@a2a-js/sdk";
+import type { AgentExecutor, ExecutionEventBus, RequestContext } from "@a2a-js/sdk/server";
 import { v4 as uuidv4 } from "uuid";
-import type { Task, TaskStatusUpdateEvent, TaskArtifactUpdateEvent } from "@a2a-js/sdk";
-import type { AgentExecutor, RequestContext, ExecutionEventBus } from "@a2a-js/sdk/server";
 
 // ---------------------------------------------------------------------------
 // Canned haiku responses

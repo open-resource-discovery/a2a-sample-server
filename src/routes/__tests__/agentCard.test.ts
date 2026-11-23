@@ -1,6 +1,6 @@
+import type { Express } from "express";
 import request from "supertest";
 import { createTestApp } from "../../__tests__/helpers/setup.js";
-import type { Express } from "express";
 
 let app: Express;
 

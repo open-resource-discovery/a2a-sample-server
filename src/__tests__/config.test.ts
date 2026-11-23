@@ -19,7 +19,7 @@ afterEach(() => {
   process.env = savedEnv;
 });
 
-async function loadConfig(): Promise<(typeof import("../config.js"))["config"]> {
+async function loadConfig(): Promise<typeof import("../config.js")["config"]> {
   const mod = await import("../config.js");
   return mod.config;
 }

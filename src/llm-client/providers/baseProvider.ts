@@ -1,7 +1,7 @@
 import type {
+  ChatCompletionChunk,
   ChatCompletionRequest,
   ChatCompletionResponse,
-  ChatCompletionChunk,
   LlmConfig,
 } from "../types.js";
 

@@ -1,13 +1,13 @@
-import { Router, Request, Response } from "express";
+import { type Request, type Response, Router } from "express";
 import { v4 as uuidv4 } from "uuid";
+import type { BaseAgent } from "../agents/baseAgent.js";
 import { agentRegistry } from "../agents/index.js";
 import { config } from "../config.js";
-import type { Task, Message } from "../types/a2a.js";
-import { JSON_RPC_ERRORS, A2A_ERRORS, type JsonRpcRequest } from "../types/jsonRpc.js";
-import type { BaseAgent } from "../agents/baseAgent.js";
-import { validateAuth } from "../middleware/auth.js";
-import { formatTask } from "../utils/protocolFormatter.js";
 import { handleStreamingSend } from "../handlers/messageStreamSend.js";
+import { validateAuth } from "../middleware/auth.js";
+import type { Message, Task } from "../types/a2a.js";
+import { A2A_ERRORS, JSON_RPC_ERRORS, type JsonRpcRequest } from "../types/jsonRpc.js";
+import { formatTask } from "../utils/protocolFormatter.js";
 
 interface AgentParams {
   agentId: string;

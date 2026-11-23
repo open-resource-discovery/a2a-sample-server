@@ -1,11 +1,11 @@
-import { Response } from "express";
+import type { Response } from "express";
 import { v4 as uuidv4 } from "uuid";
 import type { BaseAgent } from "../agents/baseAgent.js";
-import type { Message, Task, TaskStatus, Artifact } from "../types/a2a.js";
+import type { Artifact, Message, Task, TaskStatus } from "../types/a2a.js";
 import {
   formatStreamTask,
-  formatTaskStatusUpdateEvent,
   formatTaskArtifactUpdateEvent,
+  formatTaskStatusUpdateEvent,
 } from "../utils/protocolFormatter.js";
 
 interface MessageSendParams {

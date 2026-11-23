@@ -1,17 +1,17 @@
 import { LlmClient } from "../../llm-client/client.js";
-import { SolarAgent } from "../implementations/solarAgent.js";
-import { CodeReviewerAgent } from "../implementations/codeReviewerAgent.js";
+import type { BaseAgent } from "../baseAgent.js";
 import { ChefAgent } from "../implementations/chefAgent.js";
+import { CodeReviewerAgent } from "../implementations/codeReviewerAgent.js";
+import { ConverterAgent } from "../implementations/converterAgent.js";
 import { DadJokesAgent } from "../implementations/dadJokesAgent.js";
-import { LanguageTutorAgent } from "../implementations/languageTutorAgent.js";
 import { FitnessAgent } from "../implementations/fitnessAgent.js";
-import { TriviaAgent } from "../implementations/triviaAgent.js";
+import { HaikuAgent } from "../implementations/haikuAgent.js";
+import { LanguageTutorAgent } from "../implementations/languageTutorAgent.js";
+import { MediaAgent } from "../implementations/mediaAgent.js";
+import { SolarAgent } from "../implementations/solarAgent.js";
 import { StorytellerAgent } from "../implementations/storytellerAgent.js";
 import { TechNewsAgent } from "../implementations/techNewsAgent.js";
-import { HaikuAgent } from "../implementations/haikuAgent.js";
-import { ConverterAgent } from "../implementations/converterAgent.js";
-import { MediaAgent } from "../implementations/mediaAgent.js";
-import type { BaseAgent } from "../baseAgent.js";
+import { TriviaAgent } from "../implementations/triviaAgent.js";
 
 const llmClient = new LlmClient({ model: "mock" });
 

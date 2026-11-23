@@ -1,19 +1,18 @@
-import { agentRegistry } from "./registry.js";
 import { getLlmClient } from "../services/llmService.js";
-
+import { ChefAgent } from "./implementations/chefAgent.js";
+import { CodeReviewerAgent } from "./implementations/codeReviewerAgent.js";
+import { ConverterAgent } from "./implementations/converterAgent.js";
+import { DadJokesAgent } from "./implementations/dadJokesAgent.js";
+import { FitnessAgent } from "./implementations/fitnessAgent.js";
+import { HaikuAgent } from "./implementations/haikuAgent.js";
+import { LanguageTutorAgent } from "./implementations/languageTutorAgent.js";
+import { MediaAgent } from "./implementations/mediaAgent.js";
 // Import all agent implementations
 import { SolarAgent } from "./implementations/solarAgent.js";
-import { CodeReviewerAgent } from "./implementations/codeReviewerAgent.js";
-import { ChefAgent } from "./implementations/chefAgent.js";
-import { DadJokesAgent } from "./implementations/dadJokesAgent.js";
-import { LanguageTutorAgent } from "./implementations/languageTutorAgent.js";
-import { FitnessAgent } from "./implementations/fitnessAgent.js";
-import { TriviaAgent } from "./implementations/triviaAgent.js";
 import { StorytellerAgent } from "./implementations/storytellerAgent.js";
 import { TechNewsAgent } from "./implementations/techNewsAgent.js";
-import { HaikuAgent } from "./implementations/haikuAgent.js";
-import { ConverterAgent } from "./implementations/converterAgent.js";
-import { MediaAgent } from "./implementations/mediaAgent.js";
+import { TriviaAgent } from "./implementations/triviaAgent.js";
+import { agentRegistry } from "./registry.js";
 
 export function registerAllAgents(): void {
   const llmClient = getLlmClient();
@@ -32,12 +31,12 @@ export function registerAllAgents(): void {
   agentRegistry.register(new ConverterAgent(llmClient));
   agentRegistry.register(new MediaAgent(llmClient));
 
-  // eslint-disable-next-line no-console
+  // biome-ignore lint/suspicious/noConsole: Existing exception retained during tooling migration.
   console.log(
     `Registered ${agentRegistry.getAllIds().length} agents: ${agentRegistry.getAllIds().join(", ")}`,
   );
 }
 
-export { agentRegistry } from "./registry.js";
 export { BaseAgent } from "./baseAgent.js";
+export { agentRegistry } from "./registry.js";
 export type { AgentDefinition } from "./types.js";

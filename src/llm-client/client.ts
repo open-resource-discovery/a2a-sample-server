@@ -1,10 +1,10 @@
 import { MockProvider } from "./providers/mockProvider.js";
 import type {
-  LlmConfig,
-  ChatMessage,
+  ChatCompletionChunk,
   ChatCompletionRequest,
   ChatCompletionResponse,
-  ChatCompletionChunk,
+  ChatMessage,
+  LlmConfig,
 } from "./types.js";
 
 export class LlmClient {

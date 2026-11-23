@@ -1,10 +1,10 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-import { agentCardRouter } from "./routes/agentCard.js";
-import { jsonRpcRouter } from "./routes/jsonRpc.js";
-import { agentRouter } from "./routes/agentRouter.js";
 import { oauthRouter } from "./oauth/mockOAuthServer.js";
+import { agentCardRouter } from "./routes/agentCard.js";
+import { agentRouter } from "./routes/agentRouter.js";
+import { jsonRpcRouter } from "./routes/jsonRpc.js";
 
 const currentFilename = fileURLToPath(import.meta.url);
 const currentDirname = path.dirname(currentFilename);

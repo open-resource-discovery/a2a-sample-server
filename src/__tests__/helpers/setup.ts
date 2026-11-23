@@ -1,6 +1,6 @@
-import { initializeLlmClient } from "../../services/llmService.js";
 import { registerAllAgents } from "../../agents/index.js";
 import { createServer } from "../../server.js";
+import { initializeLlmClient } from "../../services/llmService.js";
 
 /**
  * Initializes the LLM client, registers all agents, and returns the Express app.
