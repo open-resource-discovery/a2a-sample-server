@@ -1,0 +1,5 @@
+# Review owners for CI and build configuration.
+/.github/ @pavelkornev
+/renovate.json @pavelkornev
+/package.json @pavelkornev
+/package-lock.json @pavelkornev
