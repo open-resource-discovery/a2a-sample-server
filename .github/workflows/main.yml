@@ -20,8 +20,11 @@ jobs:
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version-file: ".nvmrc"
+      - name: Install pinned npm for dependency policy
+        run: npm install --global --ignore-scripts npm@11.20.0 --registry=https://registry.npmjs.org/
+
       - name: Install NPM dependencies
-        run: npm ci
+        run: npm ci --ignore-scripts
       - name: ESLint
         run: npm run eslint
       - name: Prettier
@@ -37,8 +40,11 @@ jobs:
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version-file: ".nvmrc"
+      - name: Install pinned npm for dependency policy
+        run: npm install --global --ignore-scripts npm@11.20.0 --registry=https://registry.npmjs.org/
+
       - name: Install NPM dependencies
-        run: npm ci
+        run: npm ci --ignore-scripts
       - name: Run Unit Tests
         run: npm run test:ci
 
@@ -52,7 +58,10 @@ jobs:
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version-file: ".nvmrc"
+      - name: Install pinned npm for dependency policy
+        run: npm install --global --ignore-scripts npm@11.20.0 --registry=https://registry.npmjs.org/
+
       - name: Install NPM dependencies
-        run: npm ci
+        run: npm ci --ignore-scripts
       - name: Build
         run: npm run build
