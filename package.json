@@ -32,7 +32,7 @@
     "@sap/eslint-config": "0.5.2",
     "@types/express": "5.0.6",
     "@types/jest": "30.0.0",
-    "@types/node": "25.9.9",
+    "@types/node": "25.9.12",
     "@types/supertest": "7.2.1",
     "eslint": "10.15.0",
     "jest": "30.5.2",
